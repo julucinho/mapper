@@ -1,6 +1,5 @@
 package io.github.julucinho.mapper;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -8,7 +7,7 @@ import lombok.NoArgsConstructor;
 public class Mapper {
 
     public static MapperAux map(Object source){
-        return MapperAux.of(new ObjectMapper(), source);
+        return MapperAux.of(ObjectMapperFactory.createNewObjectMapper(), source);
     }
 
 }
